@@ -374,6 +374,12 @@ h3 span.meta:before {
 .container.inner{
     padding: 40px 40px 20px 40px;
 }
+
+.col-sm-4 {
+    height: 300px;
+    width: 430px;
+}
+
 .inner-small {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -1527,7 +1533,7 @@ figure.main img {
     }
     .authors-name a{
         font-size: 12px;
-        white-space: nowrap;
+        /* white-space: nowrap; */
     }
     .authors-name{
         margin-top: 8px;
@@ -3145,6 +3151,8 @@ textarea {
 	.forms [class*="col-"] {
 	    margin-bottom: 0px
 	}
+
+
 	.services-1 .divide30 {
 	    display: none
 	}
@@ -3186,3 +3194,4 @@ textarea {
 	    overflow-y: scroll;
 	}
 }
+
