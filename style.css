@@ -204,7 +204,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'bebas_neuebold';
+    font-family: 'Roboto', sans-serif;
     margin-top: 0;
     color: #4d4d4d;
     margin-bottom: 10px;
@@ -2476,6 +2476,12 @@ textarea {
 }
 .retina-icons-code i {
     font-size: 18px
+}
+.retina{
+    width: 84px;
+    max-width: 84px;
+    height: 84px;
+    max-height: 84px;
 }
 .retina-icons-code tr td:first-child,
 .retina-icons-code tr th:first-child {
