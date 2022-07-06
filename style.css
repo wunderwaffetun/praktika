@@ -1438,9 +1438,15 @@ figure.main img {
     letter-spacing: 1px;
 }
 .widget .post-list {
+    display: flex;
+    width: 60vw;
+    justify-content: space-around;
+    align-items: center;
     padding: 0;
     margin: 0;
 }
+
+
 .widget .post-list:after {
     content: '';
     display: block;
@@ -1454,6 +1460,9 @@ figure.main img {
     display: block;
     overflow: hidden;
 }
+
+
+
 .widget .post-list h5 {
     margin: 0;
     font-family: 'bebas_neuebold' !important;
