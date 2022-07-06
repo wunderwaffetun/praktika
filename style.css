@@ -1512,6 +1512,27 @@ figure.main img {
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
 }
+/* @media(min-width: 1910px){
+    .row{
+        display: flex;
+
+    }
+} */
+.owl-carousel{
+    height: 200px;
+    width: 66%;
+    /* max-width: 60vw;  */
+    /* max-height: 20vw; */
+}
+.owl-carousel .item img {
+    height: 200px;
+    width: 45vw;
+}
+.row-slider{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 @media (max-width: 610px) {
     .widget .post-list li {
         margin: 0 2px;
@@ -1755,7 +1776,7 @@ ul.tag-list li a:hover {
 .row-footer{
     display: flex;
 }
-.col-sm-3{
+.col-sm-3.col-foot{
     width: 100%;
 }
 .form-container [class*="col-"] {
