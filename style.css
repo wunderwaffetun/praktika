@@ -371,6 +371,9 @@ h3 span.meta:before {
     padding-top: 70px;
     padding-bottom: 70px;
 }
+.container.inner{
+    padding: 40px 40px 20px 40px;
+}
 .inner-small {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -493,7 +496,11 @@ footer [class*="col-"] .widget {
     margin-top: 25px
 }
 footer [class*="col-"] .widget:first-child {
-    margin-top: 0
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 footer ul.tag-list li a {
     color: #e3e3e3;
@@ -1439,8 +1446,8 @@ figure.main img {
 }
 .widget .post-list {
     display: flex;
-    width: 60vw;
-    justify-content: space-around;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
     padding: 0;
     margin: 0;
@@ -1456,8 +1463,11 @@ figure.main img {
 }
 .widget .post-list li {
     clear: both;
+    width: 33.3%;
     margin-bottom: 15px;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     overflow: hidden;
 }
 
@@ -1482,16 +1492,69 @@ figure.main img {
 }
 .widget .post-list .icon-overlay {
     float: left;
-    width: 70px;
-    height: 70px;
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+}
+.github{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.github img{
+    max-width: 40px;
+    max-height: 40px;
+    margin-right: 15px;
+}
+.github-span{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+@media (max-width: 610px) {
+    .widget .post-list li {
+        margin: 0 2px;
+        width: 33.3%;
+        margin-bottom: 15px;
+        overflow: visible;
+    }
+    .widget .post-list .icon-overlay {
+        width: 90px;
+        height: 90px;
+        border-radius: 3px;
+        margin: 0 15px;
+    }
+    .authors-name a{
+        font-size: 12px;
+        white-space: nowrap;
+    }
+    .authors-name{
+        margin-top: 8px;
+    }
+}
+.authors-name{
+    margin-top: 15px !important;
+}
+
+.authors-name a{
+    font-family: 'Roboto', sans-serif;
 }
 .widget .post-list .icon-overlay a .icn-more:before {
     border: 0
 }
+.widget-title{
+    font-size: 30px;
+    height: 50px;
+    margin: 0 0 20px 0;
+}
 .widget .post-list .meta {
-    margin-left: 85px;
+    margin-left: 0;
     margin-bottom: 0;
 }
+/* .meta-footer{
+    margin: 0;
+} */
 .widget .post-list .meta em {
     font-size: 16px;
     font-family: 'bebas_neue_regularregular';
@@ -1688,6 +1751,12 @@ ul.tag-list li a:hover {
 .form-container .row {
     margin-right: -8px;
     margin-left: -8px;
+}
+.row-footer{
+    display: flex;
+}
+.col-sm-3{
+    width: 100%;
 }
 .form-container [class*="col-"] {
     padding-right: 8px;
@@ -2076,7 +2145,7 @@ textarea {
 }
 .parallax .inner {
     padding-top: 130px;
-    padding-bottom: 130px;
+    padding-bottom: 300px;
 }
 .parallax a {
     color: #ef5f60
