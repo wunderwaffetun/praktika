@@ -295,8 +295,9 @@
                 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
                 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co">#Преобразовываем таблицу данных в массив. Стандартизируем данные массива.</span></span>
                 <span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
-                <span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Стандартизация – это метод масштабирования, при котором данные не масштабируются </span></span>
-                <span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="co"># путем преобразования статистического распределения данных в следующий формат:</span></span>
+                <span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Стандартизация – это метод масштабирования, при котором данные масштабируются </span></span>
+                <span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="co"># путем преобразования статистического распределения данных в следующий формат: среднее – 0 (ноль); стандартное отклонение – 1.
+                </span></span>
                 <span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
                 <span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="co"># преобразуем данные для их центрирования, удаляя среднее значение каждой функции, </span></span>
                 <span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="co"># а затем масштабируем ее, деля непостоянные характеристики на их стандартное отклонение.</span></span>
@@ -336,16 +337,14 @@
                 <span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Конечными результатами будут наилучшие результаты n_init последовательных запусков с точки зрения инерции.</span></span>
                 <span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a></span>
                 <span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a></span>
-                <span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Эти KMeans данные алгоритмы кластеров пытаются отдельными образцы в п групп </span></span>
-                <span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="co"># одинаковой дисперсии, сводя к минимуму критерия , известный как инерция или </span></span>
-                <span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="co"># внутри-кластера сумм квадратов . Этот алгоритм требует указания количества </span></span>
+                <span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Эти  данные алгоритмы KMeans помещаются  отдельными образцами в n группы </span></span>
+                <span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="co"># одинаковой дисперсии, сводя к минимуму критерия, известные как инерция и </span></span>
+                <span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="co"># (внутри-кластера) суммы квадратов. Этот алгоритм требует указания количества </span></span>
                 <span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="co"># кластеров. Он хорошо масштабируется для большого количества образцов и используется в </span></span>
                 <span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="co"># широком диапазоне областей применения во многих различных областях.</span></span>
                 <span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a></span>
                 <span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Алгоритм k-средних делит набор образцы в непересекающиеся кластеры,каждый из которых </span></span>
                 <span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="co"># описывается средним образцов в кластере. Средние значения обычно называют «центроидами» </span></span>
-                <span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="co"># кластера; обратите внимание, что это, как правило, не баллы из </span></span>
-                <span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a><span class="co"># , хотя они живут в одном пространстве.</span></span>
                 <span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a></span>
                 <span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Алгоритм K-средних нацелен на выбор центроидов, которые минимизируют </span></span>
                 <span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a><span class="co"># инерцию или критерий суммы квадратов внутри кластера :</span></span></code></pre>
@@ -956,9 +955,9 @@
         </div>
       </div>
       <div class="cell markdown" id="6rx3-oIe7bFb">
-        <p>Наблюдаем зависимость параметров максимального диаметра и скорости обьектов. Наибольшее количество обьектов
+        <p>Наблюдаем зависимость параметров максимального диаметра и скорости объектов. Наибольшее количество объектов
           принадлежит интервалу значений скорости[45000;150000]; интервалу значений максимального диаметра [1;15].
-          Наиболее в среднем быстрые и большие обьекты - обьекты второго кластера</p>
+          Наиболее в среднем быстрые и большие объекты - объекты второго кластера</p>
       </div>
       <div class="cell code"
         data-colab="{&quot;height&quot;:370,&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}" id="5KvhF1am8_8Y"
@@ -981,8 +980,8 @@
         </div>
       </div>
       <div class="cell markdown" id="SN-hKwwWLUmQ">
-        <p>Наблюдаем зависимость параметров расстояния промаха и скорости обьектов. Обьекты второго и нулевого кластера
-          занимают схожие позиции на графике, обьекты первого кластера обособлены.</p>
+        <p>Наблюдаем зависимость параметров расстояния промаха и скорости объектов. объекты второго и нулевого кластера
+          занимают схожие позиции на графике, объекты первого кластера обособлены.</p>
       </div>
       <div class="cell code"
         data-colab="{&quot;height&quot;:370,&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}" id="5k8U_UdfAU40"
@@ -1005,8 +1004,8 @@
         </div>
       </div>
       <div class="cell markdown" id="ZmuDA3fgL5nF">
-        <p>Наблюдаем зависимость параметров расстояния промаха и значения магнитуды. Обьекты нулевого кластера имеет
-          пересечения с обьектами второго и первого кластера. Последние имеют минимальные пересечения.</p>
+        <p>Наблюдаем зависимость параметров расстояния промаха и значения магнитуды(внутренней светимости). Объекты нулевого кластера имеет
+          пересечения с объектами второго и первого кластера. Последние имеют минимальные пересечения.</p>
       </div>
       <div class="cell code"
         data-colab="{&quot;height&quot;:363,&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}" id="juMtmjtDAesZ"
@@ -1029,8 +1028,8 @@
         </div>
       </div>
       <div class="cell markdown" id="z0gCtEf5MS1A">
-        <p>Наблюдаем зависимость параметров скорости и магнитуды обьектов. Обьекты нулевого кластера имеет пересечения с
-          обьектами второго и первого кластера. Последние имеют минимальные пересечения.</p>
+        <p>Наблюдаем зависимость параметров скорости и магнитуды объектов. объекты нулевого кластера имеет пересечения с
+          объектами второго и первого кластера. Последние имеют минимальные пересечения.</p>
       </div>
       <div class="cell markdown" id="fJ77rc_lMSuZ">
 
@@ -1056,8 +1055,8 @@
         </div>
       </div>
       <div class="cell markdown" id="qezQrGbHMpWe">
-        <p>При анализе предыдущего графика замечаем, что опасными для Земли могут быть обьекты только второго
-          кластера(но не все). В целом опасными для Земли могут быть обьекты со значением магнитуды от 13 до 23.</p>
+        <p>При анализе предыдущего графика замечаем, что опасными для Земли могут быть объекты только второго
+          кластера(но не все). В целом опасными для Земли могут быть объекты со значением магнитуды от 13 до 23.</p>
       </div>
       <div class="cell code" id="Z669qtAtw-vX">
         <div class="sourceCode" id="cb33">
